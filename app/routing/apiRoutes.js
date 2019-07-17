@@ -48,6 +48,9 @@ module.exports = function (app) {
         console.log(totalDifference + "Total Difference")
 
         }
+        console.log(bestMatch);
+        friends.push(userData);
+        console.log("New User Added: " + userData);
     });
 
 
