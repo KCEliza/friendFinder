@@ -51,6 +51,7 @@ module.exports = function (app) {
         console.log(bestMatch);
         friends.push(userData);
         console.log("New User Added: " + userData);
+        res.json(bestMatch);
     });
 
 
