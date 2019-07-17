@@ -40,6 +40,13 @@ module.exports = function (app) {
         totalDifference += Math.abs(sum - bFriendScore);
         console.log(totalDifference);
 
+        if(totalDifference <= bestMatch.friendDifference){
+            bestMatch.name = frineds[i].name;
+            bestMatch.photo = friends[i].photo;
+            bestMatch.friendDifference = totalDifference;
+        }
+        console.log(totalDifference + "Total Difference")
+
         }
     });
 
