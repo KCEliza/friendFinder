@@ -11,8 +11,8 @@ app.use(express.json());
 
 app.use(express.static("app/public"));
 
-require("app/routing/apiRoutes.js")(app);
-require("app/routing/htmlRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 
 // Start listening on PORT
