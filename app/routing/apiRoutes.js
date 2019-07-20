@@ -1,5 +1,7 @@
 var friends = require("../data/friends.js");
-
+app.get("/friends", function(req, res){
+    res.sendFile(path.join(__dirname + "/../data/friends.js"))
+})
 
 //api get request
 module.exports = function (app) {
@@ -26,7 +28,7 @@ module.exports = function (app) {
             scores: b
         }
         var sum = b.reduce((a, b) => a+b, 0)
-        console.log(`Name: ${name}\nUser Score: ${userScores}\n`);
+        console.log(`Name: ${userName}\nUser Score: ${userScores}\n`);
         console.log(`Sum of user score ${sum}\nBest friend match ${bestMatch.friendDifference}`);
     
 
